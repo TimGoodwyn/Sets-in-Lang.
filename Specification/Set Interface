@@ -1,4 +1,153 @@
-Class Set() {
+/* Constructor: for the Set object. 
+ * 
+ * Pre: function is supplied one of N representations of a set.
+ * Post: A consistant representation of the set is returned. This is an 
+ *      Isomoprhism of the input and can be easily manipulated with the
+ *      defined methods of a set.
+ * Class invariant: The original input is un-altered and won't be altered
+ *      either intentionally or unintentionally.
+ *
+ */
+Class <Set(object)> ( <object> set ) { 
 
+    return <Set(object)>
+}
 
+/* Contains method. 
+ *
+ * returns true or false dependant on whether the Set contains the member
+ *
+ * if <object> is <Set> then returns true or false dependant on whether 
+ * the Set is a superset of member.
+ */
+<Set(object)>.contains( <object> member ) {
+    
+    return <Boolean>   
+}
+
+/* Equal method
+ *
+ * returns true or false dependant on whether the Set's are equal.
+ */
+<Set(T)>.equals( <Set(T)> set ) {
+
+    return <Boolean>
+}
+
+/* Union method
+ *
+ * returns the union of the two sets.
+ *
+ * Pre: both set have a contain objects which have a common representation.
+ * Post: a new Set is returned
+ */
+<Set(T)>.union( <Set(T)> set ) {
+ 
+    return <Set(T)>
+}
+
+/* Intersect method
+ *
+ * returns the intersect of the two sets.
+ *
+ * Pre: both set have a contain objects which have a common representation.
+ * Post: a new Set is returned
+ */
+<Set(T)>.intersect( <Set(T)> set ) {
+
+    return <Set(T)>
+}
+
+/* Sort method
+ *
+ * sorts the set
+ *
+ * Pre: the predicate operatoes on the members of the set.
+ * Post: the set is sorted according to the predicate
+ */
+<Set(T)>.sort( <OrderPredicate (T) (T)> p ) { ... }
+
+/* OrderPredicate function
+ *
+ * Class invariant: left & right are not altered.
+ */
+<OrderPredicate> function ( <T> left, <T> right ) {
+    
+    return  {
+        -1 if ( left < right ) 
+        1 if ( left > right )
+        0 if ( unordered )
+    }
+}
+
+/* Difference method
+ *
+ * returns Set / set. The difference of the sets.
+ *
+ * Pre: both set have a contain objects which have a common representation.
+ * Post: a new Set is returned
+ */
+<Set(T)>.difference( <Set(T)> set ) {
+    
+    return <Set(T)>
+}
+
+/* Cartesian product
+ *
+ * returns the cartesian product of the set in some format. 
+ *
+ * Post: a new Cartesian Product is returned
+ */
+<Set(T1)>.cartesianProduct( <Set(T2)> set ) {
+    
+    return <CartesianProduct(T1 X T2)>
+}
+
+/* Map function
+ *
+ * returns a new Set which is a morphism of the original set. Each member
+ * of the set undergoes the transformation defined in the iterator.
+ */
+<Set(T1)>.map( <Iterator (T1) (T2)> it ) {
+
+    return <Set(T1)>
+}
+
+/* Iterator function.
+ *
+ * returns a new <T1>.
+ *
+ * Pre: Iterator has access to the <Set>
+ * Class invariant: value and key do not change.
+ */
+<Iterator> function ( <T1> value, <T2> key ) {
+    
+    return <T1>
+}
+
+/* filter function
+ * 
+ * returns a new Set containing all members that pass the <TruthPredicate>
+ */
+<Set(T)>.filter( <TruthPredicate (T)> p ) {
+    
+   return <Set(T)> 
+}
+
+/* TruthPredicate function
+ *
+ * returns true or false by some qualifier.
+ */
+<TruthPredicate> function ( <T> value) {
+    
+    return <Boolean>
+}
+
+/* reduce function
+ *
+ * reduces the set to a single value
+ */
+<Set(T)>.reduce( <Reducer> red ) {
+    
+    return <T>
 }
