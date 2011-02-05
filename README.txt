@@ -1,6 +1,6 @@
 SET.
 
-**In progress**
+In progress
 
 Libraries for manipulating mathematical sets.
 
